@@ -1,16 +1,16 @@
 import React from 'react';
-import Navbar from '../components/navbar/Navbar';
-import Announcment from '../components/navbar/Announcment';
 import Slider from '../../src/components/slider/slider';
 import Categories from '../components/categories/categories';
 import Products from '../components/products/products';
+import GetNews from '../components/getNews/getNews';
+import Footer from '../components/footer/footer';
+import Navbar from '../components/navbar/Navbar';
 
 function Home() {
   return (
     <>
-      <Navbar />
       <div>
-        <Announcment />
+        <Navbar />
       </div>
       <div className=" mt-5">
         <Slider />
@@ -18,8 +18,14 @@ function Home() {
       <div className=" container ">
         <Categories />
       </div>
-      <div>
+      <div className="container">
         <Products />
+      </div>
+      <div>
+        <GetNews />
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );

@@ -1,0 +1,155 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.navbar-scroll {
+  background-color: #333;
+}
+
+.logo {
+  font-size: 30px;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.nav-links li {
+  margin: 0 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.burger {
+  display: none;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .logo {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+  }
+
+  .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .line1.change {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .line2.change {
+    opacity: 0;
+  }
+
+  .line3.change {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-links {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    margin: 0;
+  }
+
+  .burger {
+    display: none;
+  }
+}
+
+.navbar-scroll {
+  background-color: #333;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-scroll .logo a {
+  color: #fff;
+}

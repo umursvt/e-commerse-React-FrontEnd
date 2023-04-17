@@ -1,0 +1,20 @@
+.mail-contaner {
+  height: 50vh;
+  position: relative;
+}
+.child-mail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.child-mail h1 {
+  font-size: 70px;
+}
+.child-mail input {
+  width: 400px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
