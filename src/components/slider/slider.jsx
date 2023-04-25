@@ -30,7 +30,7 @@ function Slider() {
     setCurrentIndex(newIndex);
   };
   return (
-    <div className="max-w-[1350px] h-[720px] w-full m-auto py-16 px-4 relative group ">
+    <div className="max-w-[1350px] h-[720px] w-full m-auto py-16 px-4 relative group mt-[30px] ">
       <div
         style={{
           backgroundImage: `url(${slides[currentIndex].image})`,

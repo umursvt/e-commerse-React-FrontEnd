@@ -23,6 +23,7 @@ function CartPage() {
   }, []);
 
   useEffect(() => {
+    // Buradaki hesap fonsiyonu güncellenmeli artık adet sayısı da geliyor...
     const price = cartItems.map((item) => item.price);
     const totalPrice = price.reduce((x, y) => x + y, 0);
     setTotalPrice(totalPrice);

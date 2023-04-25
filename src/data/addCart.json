@@ -6,52 +6,18 @@
         "img": "/static/media/bp1.bef8c210841efdf35a91.jpg",
         "title": "Lorem impus sit amet",
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis?",
-        "price": 19
+        "price": 19,
+        "quantityNumber": 1
       }
     ],
     [
       {
-        "id": 1,
-        "img": "/static/media/bp1.bef8c210841efdf35a91.jpg",
-        "title": "Lorem impus sit amet",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis?",
-        "price": 19
-      }
-    ],
-    [
-      {
-        "id": 1,
-        "img": "/static/media/bp1.bef8c210841efdf35a91.jpg",
-        "title": "Lorem impus sit amet",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis?",
-        "price": 19
-      }
-    ],
-    [
-      {
-        "id": 6,
-        "img": "/static/media/sp2.e6fd0ebd264f6f959d1b.png",
-        "title": "Lorem impus sit amet",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis?",
-        "price": 14
-      }
-    ],
-    [
-      {
-        "id": 9,
-        "img": "/static/media/cp1.0a7b8180f6fd37235d1f.png",
-        "title": "Lorem impus sit amet",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis? ",
-        "price": 29
-      }
-    ],
-    [
-      {
-        "id": 15,
+        "id": 5,
         "img": "/static/media/sp1.867db75a77c0c8441767.png",
         "title": "Lorem impus sit amet",
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis?",
-        "price": 19
+        "price": 18,
+        "quantityNumber": 2
       }
     ],
     [
@@ -60,25 +26,18 @@
         "img": "/static/media/cp3.67dd777fe7a08eda45e5.png",
         "title": "Lorem impus sit amet",
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis?",
-        "price": 32
+        "price": 32,
+        "quantityNumber": 3
       }
     ],
     [
       {
-        "id": 7,
-        "img": "/static/media/sp3.300810a778b8ba6bc9e4.png",
+        "id": 6,
+        "img": "/static/media/sp2.e6fd0ebd264f6f959d1b.png",
         "title": "Lorem impus sit amet",
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis?",
-        "price": 11
-      }
-    ],
-    [
-      {
-        "id": 14,
-        "img": "/static/media/sp3.300810a778b8ba6bc9e4.png",
-        "title": "Lorem impus sit amet",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis?",
-        "price": 10
+        "price": 14,
+        "quantityNumber": 4
       }
     ],
     [
@@ -87,16 +46,18 @@
         "img": "/static/media/bp2.18693a4d6f607a2ad806.png",
         "title": "Lorem impus sit amet",
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis?",
-        "price": 17
+        "price": 17,
+        "quantityNumber": 0
       }
     ],
     [
       {
-        "id": 13,
-        "img": "/static/media/sp2.e6fd0ebd264f6f959d1b.png",
+        "id": 15,
+        "img": "/static/media/sp1.867db75a77c0c8441767.png",
         "title": "Lorem impus sit amet",
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla inventore iusto autem sint obcaecati et aperiam. Nobis delectus quidem iste ipsa incidunt. Cumque, corporis?",
-        "price": 15
+        "price": 19,
+        "quantityNumber": 10
       }
     ]
   ]

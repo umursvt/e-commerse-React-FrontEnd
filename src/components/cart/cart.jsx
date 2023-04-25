@@ -45,7 +45,7 @@ function Cart({ cartItems, totalPrice }) {
             </Card.Body>
           </Card>
           <div className="flex items-center">
-            <p className="font-bold">{item.price} $</p>
+            <p className="font-bold pe-5 ">{item.price} $</p>
           </div>
         </div>
       ))}

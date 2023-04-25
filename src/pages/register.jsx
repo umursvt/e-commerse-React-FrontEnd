@@ -25,50 +25,36 @@ function Register() {
   };
 
   const fetchData = async () => {
-    const response = await axios.get('http://localhost:3002/register');
+    const response = await axios.get('http://localhost:3001/register');
     const data = response.data;
 
-    // console.log('Existing data:', data);
+    console.log('Existing data:', data);
     return data;
   };
 
-  const addData = async (mail, psw, user) => {
+  const handleRegister = async (e) => {
+    e.preventDefault();
     const oldData = await fetchData();
     const newData = {
-      mail,
-      psw,
-      user,
+      user: user,
+      mail: mail,
+      psw: psw,
     };
-    console.log('YENİ VERİ', newData);
-    const updatedArray = [...oldData, newData];
-    console.log(updatedArray, 'it is updated');
+    const updated = [...oldData, newData];
+    try {
+      const response = await axios.post(
+        'http://localhost:3001/register',
+        updated
+      );
+      console.log('Register json file:', response);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
     fetchData();
   }, []);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // perform validation on input fields
-    if (!user || !mail || !psw || !rePsw) {
-      console.log('Please fill in all the fields.');
-      return;
-    }
-
-    if (psw !== rePsw) {
-      console.log('Passwords do not match.');
-      return;
-    }
-
-    // call addData function with user, mail, and psw as arguments
-    addData(user, mail, psw);
-  };
 
   return (
     <>
@@ -158,7 +144,7 @@ function Register() {
               .
             </p>
             <button
-              onClick={handleSubmit}
+              onClick={handleRegister}
               type="submit"
               className="bg-orange-400 text-green-900 hover:bg-orange-500  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
