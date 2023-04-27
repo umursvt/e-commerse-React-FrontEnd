@@ -1,8 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Card } from 'react-bootstrap';
 
-function Cart({ cartItems, totalPrice }) {
+function Cart({ cartItems, sum }) {
   const [cartItem, setCartItem] = useState([]);
 
   const fetchPrice = async () => {
@@ -25,48 +24,51 @@ function Cart({ cartItems, totalPrice }) {
     console.log(response);
   };
   return (
-    <div className="max-w-3xl  w-3/4 relative ">
-      {cartItems.map((item, index) => (
-        <div
-          key={index}
-          className="flex mb-2 rounded-xl  border-black border-2 px-10 "
-        >
-          <Card className="flex-1 p-2">
-            <Card.Header>{item.title}</Card.Header>
-            <Card.Body>
-              <Card.Title>
-                <p className={item.desc.length > 50 ? 'overflow-hidden' : ''}>
-                  {item.desc.slice(0, 50)}
-                </p>
-              </Card.Title>
-              <div>
-                <img className="w-20" src={item.img} alt="" />
-              </div>
-            </Card.Body>
-          </Card>
-          <div className="flex items-center">
-            <p className="font-bold pe-5 ">{item.price} $</p>
-          </div>
-        </div>
-      ))}
-      <div className=" mt-28 me-10  fixed  top-0 right-0 bg-white p-2 shadow-lg">
-        <p className="font-bold">
-          Toplam Bakiye:
-          <span className=" ms-2 rounded-2xl bg-green-900 text-orange-400 text-xl p-2  ">
-            {totalPrice} <span className="px-1"> $</span>
+    <div>
+      <div className="container mx-auto p-10">
+        <div className="flex justify-between items-center mb-10">
+          <h1 className="text-2xl font-bold">Sepetim</h1>
+          <span className="text-lg font-bold">
+            Toplam Bakiye:
+            <span className="bg-green-900 text-orange-400 rounded-full px-4 py-2 ml-2">
+              {sum} <span className="px-1">$</span>
+            </span>
           </span>
-        </p>
-        <p className=" mt-10 shadow-2xl font-bold mx-10 ">
-          Sepeti
-          <span>
-            <button
-              onClick={handleBasket}
-              className="   border-y-black border-2 "
-            >
-              ONAYLA!
-            </button>
-          </span>{' '}
-        </p>
+        </div>
+
+        <div className="grid grid-cols-3 gap-10">
+          {cartItems.map((item, index) => (
+            <div key={index} className="border rounded-md shadow-lg">
+              <img
+                src={item.img}
+                alt={item.title}
+                className="h-48 w-full object-cover rounded-t-md"
+              />
+              <div className="p-4">
+                <h2 className="text-lg font-bold mb-2">{item.title}</h2>
+                <p className="text-sm mb-4">{item.desc}</p>
+                <p className="text-sm font-bold">{item.price} $</p>
+                <p className="text-sm font-bold   mt-2">
+                  {item.quantityNumber} item added.
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex justify-end mt-10">
+          <button
+            onClick={handleBasket}
+            className="bg-orange-400 text-white font-bold py-2 px-4 rounded-full shadow-lg"
+          >
+            ONAYLA!
+            {cartItems.length > 0 && (
+              <span className="bg-green-900 text-orange-400 rounded-full px-4 py-2 ml-2">
+                {cartItems.length}
+              </span>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );

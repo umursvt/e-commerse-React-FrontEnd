@@ -5,7 +5,7 @@ import Navbar from '../components/navbar/Navbar';
 
 function CartPage() {
   const [cartItems, setCartItems] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [sum, setSum] = useState([]);
 
   const fetchItems = async () => {
     try {
@@ -23,18 +23,24 @@ function CartPage() {
   }, []);
 
   useEffect(() => {
-    // Buradaki hesap fonsiyonu güncellenmeli artık adet sayısı da geliyor...
     const price = cartItems.map((item) => item.price);
-    const totalPrice = price.reduce((x, y) => x + y, 0);
-    setTotalPrice(totalPrice);
-    console.log('PARALAR', totalPrice);
+    const quantity = cartItems.map((item) => item.quantityNumber);
+    const len = Math.min(price.length, quantity.length);
+    const product = [];
+
+    for (let i = 0; i < len; i++) {
+      product[i] = price[i] * quantity[i];
+    }
+
+    const sum = [product.reduce((acc, curr) => acc + curr, 0)];
+    setSum(sum);
   }, [cartItems]);
 
   return (
     <div>
       <Navbar />
       <div className=" lg:mx-24  mt-[100px] ">
-        <Cart cartItems={cartItems} totalPrice={totalPrice} />
+        <Cart cartItems={cartItems} sum={sum} />
       </div>
     </div>
   );
